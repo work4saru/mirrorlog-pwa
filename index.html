@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.webmanifest">
+    <title>Mirrorlog</title>
+    <style>
+      body{margin:0;font-family:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;background:linear-gradient(#e6f4ff,#fff)}
+      .container{max-width:960px;margin:0 auto;padding:16px}
+      .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.06)}
+      .btn{background:#0ea5e9;color:#fff;border:none;border-radius:10px;padding:10px 14px;cursor:pointer}
+      .btn.secondary{background:#e2e8f0;color:#111827}
+      .btn.destructive{background:#ef4444}
+      .badge{display:inline-flex;align-items:center;padding:4px 8px;border-radius:9999px;background:#e2e8f0;color:#374151;font-size:12px;margin-right:8px}
+      .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+      .stack{display:flex;flex-direction:column;gap:12px}
+      .video-shell{border-radius:16px;overflow:hidden;border:1px solid #e5e7eb;background:#0f172a}
+      .header{position:sticky;top:0;background:rgba(255,255,255,0.7);backdrop-filter:blur(8px);border-bottom:1px solid #e5e7eb;z-index:10}
+      .pill{border:1px solid #cbd5e1;border-radius:999px;padding:6px 10px;background:#f8fafc}
+      .input{border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;width:100%}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+      .center{display:flex;justify-content:center;align-items:center}
+      .mirror{width:220px;height:220px;border-radius:9999px;background:linear-gradient(#bae6fd,#f0f9ff);border:1px solid #93c5fd;box-shadow:inset 0 10px 30px rgba(255,255,255,.8)}
+      .muted{color:#6b7280;font-size:12px}
+      @keyframes ripple { to { box-shadow: 0 0 0 120px rgba(59,130,246,0); opacity: 0; } }
+    </style>
+    <script>
+      // ENV placeholders - fill these in for cloud features
+      window.ENV_SUPABASE_URL = "";
+      window.ENV_SUPABASE_ANON_KEY = "";
+      window.ENV_VAPID_PUBLIC_KEY = "";
+      window.ENV_AI_ENABLED = false;
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
